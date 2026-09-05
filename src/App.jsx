@@ -1,4 +1,3 @@
-import heroImg from './assets/hero.png'
 import './App.css'
 
 function App() {
@@ -28,25 +27,26 @@ function App() {
 
         <a className="hire-link" href="#contact">Hire me <span aria-hidden="true">↗</span></a>
       </header>
-
+      
       <section className="hero" id="top" aria-labelledby="hero-title">
         <div className="hero-copy">
-          <p className="eyebrow">Portfolio / 2026</p>
-          <h1 id="hero-title">Building digital experiences with clarity and character.</h1>
-          <p className="intro">
-            I am a multidisciplinary designer and developer creating thoughtful products
-            for people and ambitious teams.
+          <p className="hero-kicker">Mobile & Web Developer </p>
+          <h1 id="hero-title">
+            I’m <span>Joseph Dimma Oguike</span>
+          </h1>
+          <p className="hero-summary">
+            I design and build modern digital experiences that help businesses grow.
           </p>
-          <a className="hero-action" href="#projects">Explore my work <span aria-hidden="true">↓</span></a>
-        </div>
-
-        <div className="hero-art" aria-hidden="true">
-          <div className="art-circle"></div>
-          <img src={heroImg} alt="" />
-          <p>Selected<br />work</p>
         </div>
       </section>
+    
+
+      <footer className='footer'>
+        
+      </footer>
     </main>
+
+ 
   )
 }
 
