@@ -19,6 +19,13 @@ function App() {
     { value: '900k+', label: 'Combined downloads' },
   ]
 
+  const highlightStats = [
+    { value: '6', label: 'Years of Experience' },
+    { value: '50+', label: 'Apps and Websites deployed' },
+    { value: '900K+', label: 'Combined downloads' },
+    { value: '99%', label: 'Crash-Free Sessions' },
+  ]
+
   // Prevent background scroll when mobile menu is active
   useEffect(() => {
     if (menuOpen) {
@@ -122,6 +129,31 @@ function App() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="highlights" aria-labelledby="highlights-title">
+        <div className="highlights-copy">
+          <p className="section-kicker">Selected capabilities</p>
+          <h2 id="highlights-title">Work that balances product thinking, clean UI, and reliable delivery.</h2>
+          <p className="highlights-summary">
+            Browse featured work or open my resume to get a quick view of the experience and
+            outcomes behind the portfolio.
+          </p>
+
+          <div className="highlights-actions">
+            <a className="primary-action" href="#projects">View Work</a>
+            <a className="secondary-action" href="#contact">CV / Resume</a>
+          </div>
+        </div>
+
+        <div className="highlights-grid" aria-label="Portfolio metrics">
+          {highlightStats.map((item) => (
+            <article className="highlight-card" key={item.label}>
+              <strong>{item.value}</strong>
+              <span>{item.label}</span>
+            </article>
+          ))}
         </div>
       </section>
     
