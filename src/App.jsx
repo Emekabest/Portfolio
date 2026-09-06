@@ -99,39 +99,21 @@ function App() {
       </header>
       
       <section className="hero" id="top" aria-labelledby="hero-title">
-        <div className="hero-copy">
-          <div className="hero-intro">
-            <p className="hero-kicker">Mobile & Web Developer</p>
-            
-            {/* Elegant Mobile Profile Placeholder Frame (hidden on desktop) */}
-            <div className="hero-mobile-image-wrapper">
-              <div className="hero-mobile-frame">
-                <div className="hero-mobile-frame-inner">
-                  <span className="placeholder-icon">👤</span>
-                  <p className="placeholder-label">Portrait Slot</p>
-                </div>
-              </div>
-            </div>
+        <div className='hero-content'>
 
-            <h1 id="hero-title">
-              I’m <span>Joseph Dimma Oguike</span>
-            </h1>
-            <p className="hero-summary">
-              I design and build modern digital experiences that help businesses grow.
-            </p>
+          <div className='hero-content-top'>
+
           </div>
+          <div className='hero-content-center'>
 
-          <div className="hero-stats" aria-label="Portfolio highlights">
-            {heroStats.map((stat) => (
-              <article className="hero-stat" key={stat.label}>
-                <strong>{stat.value}</strong>
-                <span>{stat.label}</span>
-              </article>
-            ))}
+          </div>
+          <div className='hero-content-bottom'>
+
           </div>
         </div>
+            
       </section>
-
+      
       <section className="highlights" aria-labelledby="highlights-title">
         <div className="highlights-copy">
           <p className="section-kicker">Selected capabilities</p>
@@ -156,10 +138,10 @@ function App() {
           ))}
         </div>
       </section>
-    
-
+      
+      
       <footer className='footer'>
-        
+         
       </footer>
     </main>
 
