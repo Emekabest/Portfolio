@@ -109,12 +109,12 @@ function App() {
               {/* <h2>Hello</h2> */}
               <div>
                 <h1>Hello</h1>
-                <p>— It’s Joseph Dimma, a developer who builds digital experiences</p>
+                <p>— It’s Joseph Dimma, a developer who solves problems</p>
               </div>
               
           </div>
           <div className='hero-content-bottom'>
-              <p>Scoll Down </p>
+              <p className="hero-scroll-cue">Scroll Down <span aria-hidden="true">↓</span></p>
           </div>
         </div>
             
