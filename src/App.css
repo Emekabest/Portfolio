@@ -1,3 +1,10 @@
+*{
+margin: 0;
+padding: 0;
+/* border: borderbo; */
+}
+
+
 .portfolio-page {
   min-height: 100svh;
   overflow: hidden;
@@ -222,7 +229,6 @@
 .hero-content{
   height: 100%;
     width: 63%;
-  border: 1px solid #333; 
   padding: 88px 0px 0px 150px;
   /* padding: 88px 0px 0px 88px;
   height: 100%;
@@ -235,19 +241,82 @@
 
 .hero-content-top{
   height: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  align-items: stretch;
+  /* padding: 0 0 22px; */
+}
+
+.hero-stat-pill {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+  min-width: 190px;
+  /* padding: 16px 18px 15px; */
+  margin: 0;
+  border-radius: 18px;
+  /* border: 1px solid rgba(23, 23, 23, 0.1); */
+  /* background: rgba(255, 255, 255, 0.72); */
+  backdrop-filter: blur(10px);
+  /* box-shadow: 0 14px 30px rgba(23, 23, 23, 0.06); */
+}
+
+.hero-stat-pill strong {
+  color: #171717;
+  font-family: var(--display);
+  font-size: clamp(20px, 1vw, 40px);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.hero-stat-pill span {
+  color: rgba(23, 23, 23, 0.64);
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.35;
+  text-transform: uppercase;
 }
 
 .hero-content-center{
   height: 60%;
-  background-color: #e3532a;
-  
+  display: flex;
+  align-items: center;  
 }
+
+.hero-content-center h1{
+  font-size: clamp(74px, 15vw, 500px);
+  color: #333;
+  font-family: var(--display);
+}
+
+.hero-content-center p{
+  font-size: clamp(10px, 1vw, 20px);
+  font-weight: bold;
+  color: #333333c0;
+  font-family: var(--sans);
+
+}
+
+
 
 .hero-content-bottom{
   height: 20%;
-  background-color: #333;
+  display: flex;
+  align-items: center;
   
 }
+
+.hero-content-bottom p{
+   font-size: clamp(10px, 1vw, 20px);
+  color: #333333c0;
+  font-family: var(--sans);
+
+} 
 
 .hero-intro {
   max-width: 560px;
@@ -269,21 +338,9 @@
   display: none;
 }
 
-.hero h1 {
-  color: #333;
-  font-family: var(--display);
-  font-size: clamp(74px, 16vw, 500px);
-  font-weight: 400;
-  letter-spacing: -0.06em;
-  line-height: 0.86;
-  /* margin-left: 50px; */
-  max-width: 8ch;
-}
 
-.hero h1 span {
-  display: block;
-  font-size: clamp(74px, 9vw, 132px);
-}
+
+
 
 .hero-summary {
   color: rgba(23, 23, 23, 0.72);

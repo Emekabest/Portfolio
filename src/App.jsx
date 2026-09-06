@@ -102,13 +102,19 @@ function App() {
         <div className='hero-content'>
 
           <div className='hero-content-top'>
-
+            <p className="hero-stat-pill"><strong>50+</strong><span>Apps and Websites deployed</span></p>
+            <p className="hero-stat-pill"><strong>900K+</strong><span>Combined downloads</span></p>
           </div>
           <div className='hero-content-center'>
-
+              {/* <h2>Hello</h2> */}
+              <div>
+                <h1>Hello</h1>
+                <p>— It’s Joseph Dimma, a developer who builds digital experiences</p>
+              </div>
+              
           </div>
           <div className='hero-content-bottom'>
-
+              <p>Scoll Down </p>
           </div>
         </div>
             
