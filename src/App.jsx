@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import heroBgImg from './assets/hero-background.png'
+import heroMobileImg from './assets/user-mobile.png'
 import './App.css'
 
 function App() {
@@ -101,6 +102,28 @@ function App() {
       <section className="hero" id="top" aria-labelledby="hero-title">
         <div className='hero-content'>
 
+          <div className='hero-content-top-mobile'>
+            <h1>Hello</h1>
+            <p>— It’s Joseph Dimma, a developer who solves problems</p>
+          </div>
+          
+          <div className='hero-content-center-mobile'>
+            <div className="mobile-circle-frame">
+              <img src={heroMobileImg} alt="Joseph Dimma" className="mobile-circle-image" />
+            </div>
+          </div>
+          
+          <div className='hero-content-bottom-mobile'>
+            <div className="mobile-stat-box">
+              <strong>50+</strong>
+              <span>Apps and Websites deployed</span>
+            </div>
+            <div className="mobile-stat-box">
+              <strong>900K+</strong>
+              <span>Combined downloads</span>
+            </div>
+          </div>
+          
           <div className='hero-content-top'>
             <p className="hero-stat-pill"><strong>50+</strong><span>Apps and Websites deployed</span></p>
             <p className="hero-stat-pill"><strong>900K+</strong><span>Combined downloads</span></p>
