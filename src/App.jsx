@@ -286,13 +286,13 @@ function App() {
 
   const heroStats = [
     { value: '50+', label: 'Apps and Website deployed' },
-    { value: '900k+', label: 'Combined downloads' },
+    { value: '500k+', label: 'Combined downloads' },
   ]
 
   const highlightStats = [
     { value: '6', label: 'Years of Experience' },
-    { value: '50+', label: 'Apps and Websites deployed' },
-    { value: '900K+', label: 'Combined downloads' },
+    { value: '40+', label: 'Apps and Websites deployed' },
+    { value: '500K+', label: 'Combined downloads' },
     { value: '99%', label: 'Crash-Free Sessions' },
   ]
 
@@ -378,6 +378,80 @@ function App() {
     'CI/CD',
   ]
 
+  const educationItems = [
+    {
+      type: 'Undergraduate Degree',
+      title: 'B.Sc. Computer Software Engineering',
+      institution: 'Federal University of Technology Owerri (FUTO)',
+      meta: '1st Class Upper',
+      timeline: '2021 – 2025 · Owerri, Imo State, Nigeria',
+      details: [
+        'Activities: Development & Software Engineering Society',
+        'Grade: 1-C Upper (First Class Honours)',
+        'Federal University of Technology, Owerri is a world-class institution focused on Science, Technology, and enterprise — operating across 9 countries.',
+      ],
+    },
+    {
+      type: 'Web Design and App Development',
+      title: 'FlorinTech Computer College',
+      institution: 'Mar 2020',
+      meta: 'Certificate',
+      timeline: 'Web Design and App Development',
+      certificateUrl: 'https://drive.google.com/file/d/1jn32yuCl3KhFJeuWoaJnQSrQumGtM8jL/view?usp=drive_link',
+      details: [],
+    },
+    {
+      type: 'Language',
+      title: 'English',
+      institution: 'Full Professional Proficiency',
+      meta: 'Communication',
+      timeline: 'Working proficiency for professional collaboration and documentation',
+      details: [],
+    },
+  ]
+
+  const contactItems = [
+    {
+      icon: '📍',
+      title: 'Location',
+      primary: 'Lagos, Nigeria',
+      secondary: 'Available for remote roles worldwide',
+    },
+    {
+      icon: '🕐',
+      title: 'Availability',
+      primary: 'Open to Work',
+      secondary: 'Contract or full-time positions',
+    },
+    {
+      icon: '💬',
+      title: 'Response',
+      primary: 'Within 24 hours',
+      secondary: 'Monday – Friday',
+    },
+  ]
+
+  const contactActions = [
+    {
+      icon: '✉',
+      label: 'Send an Email',
+      href: 'mailto:dimmaoguike@gmail.com',
+      external: false,
+    },
+    {
+      icon: '↗',
+      label: 'LinkedIn Profile',
+      href: 'https://www.linkedin.com/in/oguike/',
+      external: true,
+    },
+  ]
+
+  const contactStats = [
+    { value: '500+', label: 'Connections', highlight: 'Available' },
+    { value: '6+', label: 'Yrs Experience' },
+    { value: '40+', label: 'Apps and Website Deployed' },
+  ]
+
   // Prevent background scroll when mobile menu is active
   useEffect(() => {
     if (menuOpen) {
@@ -394,7 +468,7 @@ function App() {
     <main className="portfolio-page">
       <header className="site-header">
         <a className="logo" href="#top" aria-label="Home" onClick={() => setMenuOpen(false)}>
-          JD<span>.</span>
+          Joseph Dimma Oguike<span>.</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -466,18 +540,18 @@ function App() {
           
           <div className='hero-content-bottom-mobile'>
             <div className="mobile-stat-box">
-              <strong>50+</strong>
+              <strong>40+</strong>
               <span>Apps and Websites deployed</span>
             </div>
             <div className="mobile-stat-box">
-              <strong>900K+</strong>
+              <strong>500K+</strong>
               <span>Combined downloads</span>
             </div>
           </div>
           
           <div className='hero-content-top'>
-            <p className="hero-stat-pill"><strong>50+</strong><span>Apps and Websites deployed</span></p>
-            <p className="hero-stat-pill"><strong>900K+</strong><span>Combined downloads</span></p>
+            <p className="hero-stat-pill"><strong>40+</strong><span>Apps and Websites deployed</span></p>
+            <p className="hero-stat-pill"><strong>500K+</strong><span>Combined downloads</span></p>
           </div>
           <div className='hero-content-center'>
               {/* <h2>Hello</h2> */}
@@ -506,7 +580,7 @@ function App() {
 
           <div className="highlights-actions">
             <a className="primary-action" href="#projects">View Work</a>
-            <a className="secondary-action" href="#contact">CV / Resume</a>
+            <a className="secondary-action" href="https://drive.google.com/file/d/1UQTSGalQ_ff7pTdE1PHhQBpRkok4avWg/view?usp=drive_link" target="_blank" rel="noreferrer">CV / Resume</a>
           </div>
         </div>
 
@@ -554,7 +628,7 @@ function App() {
         <div className="about-stats" aria-label="Developer metrics">
          
           <article className="about-stat-card">
-            <strong>50+</strong>
+            <strong>40+</strong>
             <span>Apps and Websites deployed</span>
           </article>
           <article className="about-stat-card">
@@ -625,11 +699,11 @@ function App() {
 
         <div className="projects-stats" aria-label="Projects metrics">
           <div className="project-stat">
-            <strong>50+</strong>
-            <span>Apps deployed</span>
+            <strong>40+</strong>
+            <span>Apps and Websites deployed</span>
           </div>
           <div className="project-stat">
-            <strong>900K+</strong>
+            <strong>500K+</strong>
             <span>Combined downloads</span>
           </div>
           <div className="project-stat">
@@ -750,8 +824,106 @@ function App() {
           </div>
         </div>
       </section>
+
+      <section className="education" id="education" aria-labelledby="education-title">
+        <div className="education-header">
+          <p className="section-kicker">Education</p>
+          <h2 id="education-title">Academic background.</h2>
+          <p className="education-summary">
+            Formal training, certifications, and language proficiency that support my product and engineering work.
+          </p>
+        </div>
+
+        <div className="education-grid">
+          {educationItems.map((item) => (
+            <article className="education-card" key={item.title}>
+              <div className="education-card-top">
+                <p className="education-type">{item.type}</p>
+                <h3>{item.title}</h3>
+                <p className="education-institution">{item.institution}</p>
+              </div>
+
+              <div className="education-card-meta">
+                <strong>{item.meta}</strong>
+                <span>{item.timeline}</span>
+              </div>
+
+              {item.details.length > 0 && (
+                <ul className="education-details-list">
+                  {item.details.map((detail) => (
+                    <li key={detail}>{detail}</li>
+                  ))}
+                </ul>
+              )}
+
+              {item.certificateUrl && (
+                <a className="education-link" href={item.certificateUrl} target="_blank" rel="noreferrer">
+                  View Certificate <span aria-hidden="true">↗</span>
+                </a>
+              )}
+            </article>
+          ))}
+        </div>
+      </section>
+
+
+      <section className="contact" id="contact" aria-labelledby="contact-title">
+        <div className="contact-header">
+          <p className="section-kicker">Contact</p>
+          <h2 id="contact-title">Let's make it happen.</h2>
+          <p className="contact-summary">
+            I'm open to remote opportunities, whether contract or full-time, and interested in working with teams building innovative web and Flutter-powered solutions. Feel free to reach out and let's discuss how we can work together.
+          </p>
+        </div>
+
+        <div className="contact-content">
+          <div className="contact-details-grid">
+            {contactItems.map((item) => (
+              <div key={item.title} className="contact-detail-item">
+                <span className="contact-icon" aria-hidden="true">{item.icon}</span>
+                <div className="contact-detail-content">
+                  <h3>{item.title}</h3>
+                  <p className="contact-primary">{item.primary}</p>
+                  <p className="contact-secondary">{item.secondary}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="contact-actions">
+            {contactActions.map((action) => (
+              <a
+                key={action.label}
+                className="contact-action-link"
+                href={action.href}
+                target={action.external ? '_blank' : '_self'}
+                rel={action.external ? 'noreferrer' : ''}
+              >
+                <span className="action-icon" aria-hidden="true">{action.icon}</span>
+                {action.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="contact-stats" aria-label="Contact metrics">
+          {contactStats.map((stat) => (
+            <div key={stat.label} className="contact-stat">
+              {stat.highlight && <span className="stat-highlight">{stat.highlight}</span>}
+              <strong>{stat.value}</strong>
+              <span>{stat.label}</span>
+            </div>
+          ))}
+        </div>
+      </section>
       
       <footer className='footer'>
+        <div className="footer-content">
+          <div className="footer-inner">
+            <img src={heroMobileImg} alt="Joseph Dimma Oguike" className="footer-image" />
+            <p>&copy; 2026 Joseph Dimma Oguike. All rights reserved.</p>
+          </div>
+        </div>
       </footer>
     </main>
 
