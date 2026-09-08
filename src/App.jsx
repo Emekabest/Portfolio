@@ -5,6 +5,7 @@ import './App.css'
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [expandedExperience, setExpandedExperience] = useState(0)
 
   const navigationItems = [
     'About',
@@ -13,6 +14,60 @@ function App() {
     'Skills',
     'Education',
     'Contact',
+  ]
+
+  const experiences = [
+    {
+      id: 0,
+      company: 'Airtel SmartCash PSB',
+      period: 'Oct 2023 - Now',
+      highlights: 'Backend Development',
+      details: [
+        'Collaborated with a cross-functional team to develop and maintain backend services using Java Spring Boot.',
+        'Built and exposed RESTful APIs to support mobile and web applications, ensuring secure and efficient data exchange.',
+        'Integrated database operations using JPA/Hibernate for data persistence and optimized queries for improved performance.',
+        'Participated in code reviews, debugging, and performance tuning, contributing to improved system reliability and reduced response times.',
+      ]
+    },
+    {
+      id: 1,
+      company: 'Hafrik',
+      period: 'Nov 2025',
+      highlights: 'Full-Stack Web Development',
+      details: [
+        'Developed and launched responsive websites using modern web technologies.',
+        'Built features such as authentication, dashboards, user interactions, media uploads, and video content.',
+        'Integrated backend APIs for authentication, data management, and real-time features.',
+        'Improved website performance and fixed technical issues during development and deployment.',
+        'Managed website testing, builds, hosting, and production deployment.',
+      ]
+    },
+    {
+      id: 2,
+      company: 'Ori App Studio',
+      period: 'Oct 2021',
+      highlights: 'React Native Development',
+      details: [
+        'Contributed to the development and maintenance of a cross-platform travel budgeting mobile application using React Native.',
+        'Built responsive, user-friendly interfaces for managing travel expenses, monitoring spending, and organizing travel-related data.',
+        'Integrated RESTful APIs and managed application state and asynchronous operations to keep financial and travel data synchronized.',
+        'Improved app performance by optimizing rendering, navigation flows, and component updates while implementing validation, loading states, and error handling.',
+        'Collaborated remotely with developers and stakeholders to implement features, resolve bugs, and deliver reliable application updates.',
+      ]
+    },
+    {
+      id: 3,
+      company: 'Florin Tech',
+      period: 'Apr 2020',
+      highlights: 'Real-Time Web Development',
+      details: [
+        'Developed a real-time voting website with a smooth and responsive user experience.',
+        'Integrated Firebase Firestore to provide live vote updates and display results without refreshing the page.',
+        'Built an interactive voting system with validation to prevent duplicate voting and ensure fairness.',
+        'Improved website performance and handled real-time data updates efficiently.',
+        'Added loading states and error handling while using Git for version control.',
+      ]
+    }
   ]
 
   const heroStats = [
@@ -142,6 +197,7 @@ function App() {
         </div>
             
       </section>
+
       
       <section className="highlights" aria-labelledby="highlights-title">
         <div className="highlights-copy">
@@ -224,9 +280,48 @@ function App() {
         </div>
       </section>
       
+<section className="experience" id="experience" aria-labelledby="experience-title">
+        <div className="experience-header">
+          <p className="section-kicker">Experience</p>
+          <h2 id="experience-title">Where I've made an impact.</h2>
+        </div>
+
+        <div className="experience-list">
+          {experiences.map((exp) => (
+            <div key={exp.id} className="experience-item">
+              <button
+                className={`experience-trigger ${expandedExperience === exp.id ? 'is-active' : ''}`}
+                onClick={() => setExpandedExperience(expandedExperience === exp.id ? -1 : exp.id)}
+                aria-expanded={expandedExperience === exp.id}
+                aria-controls={`experience-details-${exp.id}`}
+              >
+                <div className="experience-header-row">
+                  <div className="experience-title-group">
+                    <h3 className="experience-company">{exp.company}</h3>
+                    <p className="experience-period">{exp.period}</p>
+                  </div>
+                  <div className="experience-highlights">{exp.highlights}</div>
+                  <div className="experience-toggle">
+                    <span className="toggle-icon" aria-hidden="true">+</span>
+                  </div>
+                </div>
+              </button>
+
+              {expandedExperience === exp.id && (
+                <div id={`experience-details-${exp.id}`} className="experience-details">
+                  <ul className="experience-details-list">
+                    {exp.details.map((detail, idx) => (
+                      <li key={idx}>{detail}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
       
       <footer className='footer'>
-         
       </footer>
     </main>
 
