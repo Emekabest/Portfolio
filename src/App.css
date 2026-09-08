@@ -33,7 +33,7 @@ padding: 0;
 
 .logo {
   font-family: var(--sans);
-  font-size: 16px;
+  font-size: 25px;
   font-weight: 700;
   letter-spacing: 0;
   margin-right: clamp(32px, 4.6vw, 72px);
