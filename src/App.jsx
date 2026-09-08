@@ -167,6 +167,62 @@ function App() {
           ))}
         </div>
       </section>
+
+
+      <section className="about" id="about" aria-labelledby="about-title">
+        <div className="about-content">
+          <div className="about-copy">
+            <p className="section-kicker">About Me</p>
+            <h2 id="about-title">Engineering web and mobile experiences that last.</h2>
+            <p className="about-bio">
+              Hey there! I'm Joseph Dimma Oguike, a Senior Web and Mobile Developer with 6 years of experience building and scaling production-grade mobile applications.
+            </p>
+            <p className="about-bio">
+              I work primarily with React, ReactNative & JavaScript, with deep expertise in integrating Firebase, SpringBoot, RESTful APIs, and managing app state using Zustand and Redux. What I enjoy most is building things that last — apps that scale as products and teams grow.
+            </p>
+            <p className="about-bio">
+              I've worked closely with designers, backend engineers, and product managers in distributed, remote-first teams, turning complex requirements into intuitive, high-performance mobile experiences.
+            </p>
+          </div>
+
+          <div className="about-strengths">
+            <h3>Core Strengths</h3>
+            <ul className="strengths-list">
+              <li>Clean Architecture & MVVM design patterns</li>
+              <li>99.5% crash-free session rate across all apps</li>
+              <li>CI/CD pipelines with Codemagic & Fastlane</li>
+              <li>Cross-functional remote-first collaboration</li>
+              <li>State management: Zustand, Redux</li>
+              <li>Firebase integration: Auth, Firestore, FCM</li>
+              <li>Open to remote work — contract or full-time</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="about-stats" aria-label="Developer metrics">
+         
+          <article className="about-stat-card">
+            <strong>50+</strong>
+            <span>Apps and Websites deployed</span>
+          </article>
+          <article className="about-stat-card">
+            <strong>300K+</strong>
+            <span>Combined Downloads</span>
+          </article>
+          <article className="about-stat-card">
+            <strong>4.5+</strong>
+            <span>App Store Rating</span>
+          </article>
+          <article className="about-stat-card">
+            <strong>99%</strong>
+            <span>Crash-Free Rate</span>
+          </article>
+          <article className="about-stat-card">
+            <strong>6</strong>
+            <span>Total Exp. Years</span>
+          </article>
+        </div>
+      </section>
       
       
       <footer className='footer'>

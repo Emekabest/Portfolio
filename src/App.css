@@ -545,6 +545,124 @@ footer{
   display: none;
 }
 
+/* About Section */
+.about {
+  padding: clamp(56px, 8vw, 108px) clamp(24px, 5vw, 76px);
+  background: #ffffff;
+}
+
+.about-content {
+  display: grid;
+  gap: clamp(32px, 5vw, 56px);
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: start;
+  margin-bottom: clamp(32px, 5vw, 56px);
+}
+
+.about-copy {
+  max-width: 560px;
+}
+
+.about-copy h2 {
+  color: #171717;
+  font-family: var(--display);
+  font-size: clamp(34px, 4.8vw, 62px);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 1.05;
+  margin: 0 0 22px;
+  max-width: 14ch;
+}
+
+.about-bio {
+  color: rgba(23, 23, 23, 0.72);
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 16px 0 0;
+  max-width: 60ch;
+}
+
+.about-bio:first-of-type {
+  margin-top: 0;
+}
+
+.about-strengths {
+  max-width: 560px;
+}
+
+.about-strengths h3 {
+  color: #171717;
+  font-family: var(--display);
+  font-size: clamp(24px, 3vw, 40px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin: 0 0 18px;
+}
+
+.strengths-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.strengths-list li {
+  color: rgba(23, 23, 23, 0.72);
+  font-size: 15px;
+  line-height: 1.6;
+  padding-left: 24px;
+  position: relative;
+}
+
+.strengths-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #e3532a;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.about-stats {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: clamp(32px, 5vw, 48px);
+}
+
+.about-stat-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(23, 23, 23, 0.09);
+  border-radius: 28px;
+  box-shadow: 0 18px 36px rgba(23, 23, 23, 0.06);
+  min-height: 170px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.about-stat-card strong {
+  color: #171717;
+  font-family: var(--display);
+  font-size: clamp(40px, 4.5vw, 64px);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.about-stat-card span {
+  color: rgba(23, 23, 23, 0.62);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
 @media (max-width: 850px) {
   .site-header { height: 72px; }
   .primary-nav { display: none; }
@@ -688,6 +806,22 @@ footer{
   }
 
   .highlight-card {
+    min-height: 140px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .about-copy h2 {
+    max-width: 100%;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-stat-card {
     min-height: 140px;
   }
 }
